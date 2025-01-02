@@ -35,6 +35,7 @@ repositories {
 	mavenCentral()
 	google()
 	maven("https://maven.brott.dev/")
+	maven("https://maven.pedropathing.com")
 }
 
 android {
@@ -72,6 +73,8 @@ dependencies {
 		exclude(group = "org.firstinspires.ftc")
 	}
 
+	implementation("org.ftclib.ftclib:core:2.1.1")
+
 	implementation("org.apache.commons:commons-math3:3.6.1")
 	dokkaGfmPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.9.20")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.20")
@@ -83,7 +86,7 @@ publishing {
 	publications {
 		register<MavenPublication>("release") {
 			groupId = "com.pedropathing"
-			artifactId = "dev"
+			artifactId = "ftclib"
 			version = "1.0.3"
 
 			afterEvaluate {
