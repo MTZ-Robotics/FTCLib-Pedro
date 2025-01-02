@@ -69,7 +69,7 @@ public class FollowPath extends CommandBase {
 
     /**
      * Sets the T-value at which the follower will consider the path complete
-     * @param power Between 0 and 1
+     * @param t Between 0 and 1
      * @return This command for compatibility in command groups
      */
     public FollowPath setCompletionThreshold(double t) {
