@@ -12,6 +12,7 @@ public class FollowPath extends CommandBase {
     private final PathChain path;
     private boolean holdEnd = true;
     private double maxPower = 1;
+    private double completionThreshold = 0.99;
 
     public FollowPath(Follower follower, PathChain pathChain) {
         this.follower = follower;
@@ -66,6 +67,16 @@ public class FollowPath extends CommandBase {
         return this;
     }
 
+    /**
+     * Sets the T-value at which the follower will consider the path complete
+     * @param power Between 0 and 1
+     * @return This command for compatibility in command groups
+     */
+    public FollowPath setCompletionThreshold(double t) {
+        this.completionThreshold = t;
+        return this;
+    }
+
     @Override
     public void initialize() {
         follower.setMaxPower(this.maxPower);
@@ -75,7 +86,7 @@ public class FollowPath extends CommandBase {
     @Override
     public boolean isFinished() {
         if ( follower.getCurrentPathNumber() == this.path.size() - 1 && Math.abs(follower.headingError) < 0.1 ) {
-            return follower.getCurrentTValue() > 0.99;
+            return follower.getCurrentTValue() >= this.completionThreshold;
         }
         return false;
     }
