@@ -73,6 +73,8 @@ dependencies {
 		exclude(group = "org.firstinspires.ftc")
 	}
 
+	implementation("com.pedropathing:pedro:1.0.3")
+
 	implementation("org.ftclib.ftclib:core:2.1.1")
 
 	implementation("org.apache.commons:commons-math3:3.6.1")
