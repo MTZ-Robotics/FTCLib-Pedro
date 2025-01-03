@@ -1,5 +1,6 @@
 package com.pedropathing.commands;
 
+import com.arcrobotics.ftclib.command.Command;
 import com.arcrobotics.ftclib.command.CommandBase;
 import com.pedropathing.follower.Follower;
 import com.pedropathing.localization.Pose;
@@ -7,6 +8,7 @@ import com.pedropathing.pathgen.BezierPoint;
 import com.pedropathing.pathgen.Point;
 
 public class HoldPoint extends CommandBase {
+
     private final BezierPoint holdPoint;
     private final double heading;
     private final Follower follower;
