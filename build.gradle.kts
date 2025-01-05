@@ -73,7 +73,7 @@ dependencies {
 		exclude(group = "org.firstinspires.ftc")
 	}
 
-	implementation("com.pedropathing:pedro:1.0.3")
+	implementation("com.pedropathing:pedro:1.0.4")
 
 	implementation("org.ftclib.ftclib:core:2.1.1")
 
@@ -89,7 +89,7 @@ publishing {
 		register<MavenPublication>("release") {
 			groupId = "com.pedropathing"
 			artifactId = "ftclib"
-			version = "1.0.3-test"
+			version = "1.0.4"
 
 			afterEvaluate {
 				from(components["release"])
