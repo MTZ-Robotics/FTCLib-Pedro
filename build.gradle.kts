@@ -73,9 +73,9 @@ dependencies {
 		exclude(group = "org.firstinspires.ftc")
 	}
 
-	implementation("com.pedropathing:pedro:1.0.5")
+	compileOnly("com.pedropathing:pedro:1.0.6")
 
-	implementation("org.ftclib.ftclib:core:2.1.1")
+	compileOnly("org.ftclib.ftclib:core:2.1.1")
 
 	implementation("org.apache.commons:commons-math3:3.6.1")
 	dokkaGfmPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.9.20")
@@ -89,7 +89,7 @@ publishing {
 		register<MavenPublication>("release") {
 			groupId = "com.pedropathing"
 			artifactId = "ftclib"
-			version = "1.0.5"
+			version = "1.0.6"
 
 			afterEvaluate {
 				from(components["release"])
