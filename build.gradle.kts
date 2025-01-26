@@ -63,17 +63,17 @@ android {
 }
 
 dependencies {
-	compileOnly("org.firstinspires.ftc:RobotCore:10.1.1")
-	compileOnly("org.firstinspires.ftc:Hardware:10.1.1")
-	compileOnly("org.firstinspires.ftc:FtcCommon:10.1.1")
-	compileOnly("org.firstinspires.ftc:RobotServer:10.1.1")
-	compileOnly("org.firstinspires.ftc:OnBotJava:10.1.1")
+	compileOnly("org.firstinspires.ftc:RobotCore:10.2.0")
+	compileOnly("org.firstinspires.ftc:Hardware:10.2.0")
+	compileOnly("org.firstinspires.ftc:FtcCommon:10.2.0")
+	compileOnly("org.firstinspires.ftc:RobotServer:10.2.0")
+	compileOnly("org.firstinspires.ftc:OnBotJava:10.2.0")
 
 	implementation("com.acmerobotics.dashboard:dashboard:0.4.16") {
 		exclude(group = "org.firstinspires.ftc")
 	}
 
-	compileOnly("com.pedropathing:pedro:1.0.6")
+	compileOnly("com.pedropathing:pedro:1.0.7")
 
 	compileOnly("org.ftclib.ftclib:core:2.1.1")
 
@@ -89,7 +89,7 @@ publishing {
 		register<MavenPublication>("release") {
 			groupId = "com.pedropathing"
 			artifactId = "ftclib"
-			version = "1.0.6"
+			version = "1.0.7"
 
 			afterEvaluate {
 				from(components["release"])
