@@ -8,3 +8,5 @@ pluginManagement {
 }
 
 rootProject.name = "PedroPathing"
+include(":FtcRobotController")
+include(":TeamCode")
